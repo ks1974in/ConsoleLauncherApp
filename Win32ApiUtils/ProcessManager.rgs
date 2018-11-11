@@ -1,0 +1,26 @@
+HKCR
+{
+	Win32ApiUtils.ProcesManager.1 = s 'ProcessManager class'
+	{
+		CLSID = s '{e07bbe6a-bbf4-4edc-bae2-92b6521cf194}'
+	}
+	Win32ApiUtils.ProcesManager = s 'ProcessManager class'
+	{		
+		CurVer = s 'Win32ApiUtils.ProcesManager.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {e07bbe6a-bbf4-4edc-bae2-92b6521cf194} = s 'ProcessManager class'
+		{
+			ProgID = s 'Win32ApiUtils.ProcesManager.1'
+			VersionIndependentProgID = s 'Win32ApiUtils.ProcesManager'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{a6a8e288-adca-4489-abf6-e058a6b92d23}'
+			Version = s '1.0'
+		}
+	}
+}
